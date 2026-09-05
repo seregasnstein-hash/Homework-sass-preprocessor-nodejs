@@ -1,0 +1,48 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.header {
+  background-color: v.$primary-color;
+  padding: 20px 50px;
+
+
+  &__logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover{
+        color: v.$text-color;
+      }
+    }
+  }
+}
+
+@include m.tablet {
+  .header {
+    padding: 20px;
+
+    &__nav {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@include m.mobile {
+  .header {
+    &__nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+}

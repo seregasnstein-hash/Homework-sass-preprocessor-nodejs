@@ -1,0 +1,58 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.menu {
+  padding: 80px 50px;
+  background-color: v.$secondary-color;
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 36px;
+    color: v.$text-color;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__card {
+    width: 280px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  &__price {
+    font-weight: bold;
+    color: v.$primary-color;
+  }
+}
+
+@include m.tablet {
+  .menu {
+    padding: 60px 20px;
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__card {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use "variables" as v;
+
+.footer {
+  padding: 50px;
+  background-color: v.$text-color;
+  color: white;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+
+  &__contacts {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+}
